@@ -271,7 +271,7 @@ module cpu (
                 endcase
             end
             regs[0] <= 32'b0;
-            inst_addr <= pc;
+            inst_addr <= waiting_load ? waiting_next_pc : pc;
         end
     end
 endmodule
